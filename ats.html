@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Resume Scanner</title>
+    <link rel="stylesheet" href="ats.css">
+
+    <!-- PDF.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>ATS Resume Scanner</h1>
+
+    <textarea id="jobDesc" placeholder="Paste Job Description here"></textarea>
+
+    <input type="file" id="resumeFile" accept=".pdf">
+
+    <button onclick="checkATS()">Check Resume</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="ats.js"></script>
+</body>
+</html>
