@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Skill Match Checker</title>
+    <meta charset="UTF-8">
+    <title>Smart Skill Gap Analyzer</title>
     <link rel="stylesheet" href="check.css">
+
+    <!-- jsPDF CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
 <div class="container">
-    <h1>Skill Gap Analyzer</h1>
+    <h1>🎯 Smart Career Skill Analyzer</h1>
 
-    <textarea id="userSkills" placeholder="Enter your skills (comma separated)"></textarea>
+    <div class="card">
+        <label>Target Job Role</label>
+        <input type="text" id="jobRole" placeholder="Example: Production Engineer">
 
-    <textarea id="jobDesc" placeholder="Paste job description here"></textarea>
+        <label>Your Current Skills (comma separated)</label>
+        <input type="text" id="currentSkills" placeholder="Example: Lean Manufacturing Principles (Six Sigma), CAD Proficiency">
 
-    <button onclick="checkSkills()">Check Match</button>
+        <button onclick="analyzeSkills()">Analyze Skill Gap</button>
+    </div>
 
-    <div id="result"></div>
+    <div id="resultSection" class="hidden"></div>
+
+    <div id="timetableSection" class="hidden">
+        <label>Number of Days to Prepare</label>
+        <input type="number" id="daysInput" min="1" max="180">
+        <button onclick="generateTimetable()">Generate Study Plan</button>
+    </div>
+
+    <div id="finalOutput"></div>
+
+    <button id="downloadBtn" class="hidden" onclick="downloadPDF()">Download Timetable (PDF)</button>
 </div>
 
 <script src="check.js"></script>
