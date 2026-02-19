@@ -1,21 +1,14 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <title>Innovation Learning Platform</title>
     <link rel="stylesheet" href="home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a1293d3619.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<nav>
-    <div class="logo">INNOVATE HUB</div>
-    <ul>
-        <li><a href="news.html">NewsHub</a></li>
-        <li><a href="check.html">Skill Map</a></li>
-        <li><a href="ats.html">Resume Analyzer</a></li>
-        <li><a href="course.html">Course Recommendation</a></li>
-        <li><a href="tools.html">Tools Explorer</a></li>
-    </ul>
-</nav>
 
 <section class="zigzag">
     <div class="text">
@@ -80,3 +73,171 @@
 <script src="home.js"></script>
 </body>
 </html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Innovation Learning Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="home.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a1293d3619.js" crossorigin="anonymous"></script>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <img src="logo.png" class="me-2 w-100">
+      Innovation Hub
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler" type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse text-white justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" >
+        <li class="nav-item" id = "nav-names"><a class="nav-link text-white" href="news.html">NewsHub</a></li>
+        <li class="nav-item" id = "nav-names"><a class="nav-link text-white" href="check.html">Skill Map</a></li>
+        <li class="nav-item" id = "nav-names"><a class="nav-link text-white" href="ats.html">Resume Analyzer</a></li>
+        <li class="nav-item" id = "nav-names"><a class="nav-link text-white" href="course.html">Course Recommendation</a></li>
+        <li class="nav-item" id = "nav-names"><a class="nav-link text-white" href="tools.html">Tools Explorer</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ================= SECTION 1 ================= -->
+
+<section class="section-spacing part1">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+        <h2 class="fw-bold">NewsHub</h2>
+        <p>NewsHub is your gateway to staying ahead in the rapidly evolving world of technology and innovation. It curates high-impact updates from emerging fields such as artificial intelligence, cybersecurity, cloud computing, and digital transformation, filtering out noise and delivering insights that truly matter. Instead of overwhelming you with scattered information, NewsHub connects industry trends with real career opportunities, helping learners, developers, and aspiring professionals make informed decisions. By transforming daily tech updates into actionable knowledge, it builds strategic awareness and empowers you to anticipate change rather than react to it.</p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="https://wikilegal.vn/wp-content/uploads/2025/11/z7174484351645_453ec12437c2b7229c3ef56769b982d5.jpg" class="img-fluid image">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SECTION 2 (REVERSE) ================= -->
+
+<section class="section-spacing part2">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row-reverse">
+
+      <div class="col-lg-6">
+        <h2 class="fw-bold">Skill Map</h2>
+        <p>A skill map is a structured visual or analytical representation of an individual’s current competencies, proficiency levels, and skill gaps relative to a target role or industry standard. It categorizes skills into domains such as technical, analytical, and soft skills, and assigns measurable levels (e.g., beginner, intermediate, advanced). In a resume analysis system, a skill map helps identify strengths, highlight missing competencies, and recommend targeted learning paths. By aligning existing skills with job requirements, a skill map enables strategic upskilling, clearer career planning, and improved employability outcomes</p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="https://cdn.prod.website-files.com/6410a70e84096b7779ce73c2/655cec31375ff1c7adc9b745_skills-gap.jpeg" class="img-fluid image">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SECTION 3 ================= -->
+
+<section class="section-spacing part1">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+        <h2 class="fw-bold">Resume Analyzer</h2>
+        <p>A resume analyser provides intelligent course recommendations based on a candidate’s current skill level, experience, and identified gaps. By evaluating technical skills, certifications, projects, and industry alignment, it determines whether the candidate falls into beginner, intermediate, or advanced categories. For beginners, it suggests foundational courses to strengthen core concepts and essential tools. For intermediate candidates, it recommends skill-enhancement programs, project-based learning, and domain-specific certifications. For advanced professionals, it proposes specialized courses, leadership training, and emerging technology programs to maintain a competitive edge. This level-based recommendation approach ensures structured skill development and improves overall employability.</p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="https://blog.theinterviewguys.com/wp-content/uploads/2025/10/free-ai-resume-analyzer.jpg" class="img-fluid image">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SECTION 4 (REVERSE) ================= -->
+
+<section class="section-spacing part2">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row-reverse">
+
+      <div class="col-lg-6">
+        <h2 class="fw-bold">Course Recommendation</h2>
+        <p>A good course recommendation system suggests learning paths that match your current skill level and long-term goals. For beginners, it recommends foundational courses that build core knowledge, introduce essential tools, and establish strong fundamentals. At intermediate levels, it suggests courses that deepen understanding, introduce real-world projects, and expand technical skills. For advanced learners, it recommends specialized or expert-level courses that focus on complex topics, performance optimization, industry best practices, and mastery of cutting-edge technologies. By tailoring recommendations to your level, you can learn efficiently, avoid overwhelm, and progress steadily toward your career objectives</p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="https://thumbs.dreamstime.com/b/recommendation-system-blue-word-concept-target-audience-marketing-personalized-content-horizontal-vector-image-headline-text-341536363.jpg" class="img-fluid image">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SECTION 5 ================= -->
+
+<section class="section-spacing part1">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+        <h2 class="fw-bold">Tool Explorer</h2>
+        <p>Modern digital tools are reshaping development and business ecosystems 
+          by enabling faster innovation, seamless collaboration,
+           and scalable solutions. Technologies such as cloud platforms,
+            automation tools, analytics systems, and version control frameworks
+             empower teams to streamline workflows, enhance productivity, and deliver 
+             high-quality products efficiently. By mastering these tools, organizations 
+             can improve performance, strengthen security, adapt quickly to evolving market demands, 
+             and maintain a competitive edge in today’s rapidly advancing digital landscape.</p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="https://edunami.co.in/wp-content/uploads/2025/01/EDUNAMI-12-01-2025-768x439.webp" class="img-fluid image">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
