@@ -1,6 +1,9 @@
-body {
+/*body {
   text-align: center;
   font-family: Arial;
+  background-image: url("https://img.freepik.com/free-photo/clipboard-with-ribbons-candles_23-2147628613.jpg");
+  height:100vh;
+  background-size: cover;
 }
 
 input {
@@ -8,7 +11,111 @@ input {
   padding: 8px;
   width: 250px;
 }
-
+#signupForm{
+    background-image: url("https://media.istockphoto.com/id/1210413775/vector/blue-sky-with-lens-flare-and-bokeh-pattern-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=RpX421HmpmPa3wt69WzBBEVOirjPmkg60EBk5MYgmKk=");
+    background-size: cover;
+    width: 50vw;
+    padding:
+}
 button {
   padding: 8px 20px;
+}*/
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://img.freepik.com/free-photo/clipboard-with-ribbons-candles_23-2147628613.jpg");
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Signup Box */
+#signupForm {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201101/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_452981.jpg");
+    background-size: cover;
+    padding: 20px;
+    margin-top:15px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(31, 28, 29, 0.744);
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    
+    top: 20px;
+    font-size: 28px;
+    color: #000;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #34f4fb,rgb(248, 244, 244), #4ba28f);    
+    color: rgb(11, 10, 10);
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg,  #37dbe1,rgb(252, 249, 249), #35a990);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+    
+
+
+/* Paragraph & Link */
+p {
+    margin: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+}
+
+a {
+    color: #eae6ed;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color:#0ef2d7;
 }
