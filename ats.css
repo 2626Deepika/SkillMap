@@ -1,4 +1,147 @@
 body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    min-height: 100vh;   /* Make body at least full viewport height */
+    /*background-image: linear-gradient(135deg, aqua, rgb(71, 123, 123));*/
+    background-image: url("https://media.istockphoto.com/id/2213051516/video/polygonal-network-shape-dynamic-gradients-4k-stock-video.avif?s=640x640&k=20&c=n4cvn7qfxVkddnoOZ-WoWMHCcJFnOz4awsOrzg5D5QM=");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  /* Stretches gradient over the page */
+    padding: 20px;
+}
+/*
+.container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 10vh;
+    /*background-image: url("https://e0.pxfuel.com/wallpapers/557/673/desktop-wallpaper-indefinit-1-undefined-1-blue-background-baby-blue-blue-colour-light-blue-plain.jpg");
+    background-image: linear-gradient(rgba(0,123,255,0.3), rgba(0,123,255,0.3));
+    background-size: cover;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+*/
+.container {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 10vh;
+    
+    background: 
+        linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+        url("https://e0.pxfuel.com/wallpapers/557/673/desktop-wallpaper-indefinit-1-undefined-1-blue-background-baby-blue-blue-colour-light-blue-plain.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(135deg ,rgb(11, 234, 149),rgb(221, 236, 234),rgb(10, 220, 235));
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-size: 19px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8f9fa95;
+    border-radius: 10px;
+}
+
+.score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px auto;
+    position: relative;
+    color: #000;
+}
+
+.score-circle.red {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.score-circle.green {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.match-head{
+    color:#28a745
+}
+.miss-head{
+    color:#dc3545
+}
+li.check::before {
+    content: "✔ ";
+    color: green;
+    font-weight: bold;
+}
+
+li.cross::before {
+    content: "✖ ";
+    color: red;
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.suggestions li::before {
+    content: "💡 ";
+    
+}
+.suggestion-head{
+    color:rgb(180, 166, 9)
+}
+
+
+/*body {
     font-family: Arial, sans-serif;
     background: #f0f2f5;
     display: flex;
