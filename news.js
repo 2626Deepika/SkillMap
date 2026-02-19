@@ -1,27 +1,50 @@
-import axios from "axios";
+let currentIndex = 0;
+let slides = [];
 
-export default async function handler(req, res) {
+async function loadNews() {
   try {
-    const topics = [
-      "India IT hiring surge 2026",
-      "India startup funding jobs",
-      "India layoffs corporate sector",
-      "India government job recruitment"
-    ];
+    const response = await fetch("/api/news");
+    const articles = await response.json();
 
-    const results = [];
+    const carousel = document.getElementById("carousel");
+    carousel.innerHTML = "";
 
-    for (let topic of topics) {
-      const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${encodeURIComponent(topic)}&language=en&sortBy=publishedAt&pageSize=1&apiKey=${process.env.NEWS_API_KEY}`
-      );
-      if (response.data.articles.length > 0) {
-        results.push(response.data.articles[0]);
-      }
-    }
+    articles.forEach(article => {
+      const slide = document.createElement("div");
+      slide.classList.add("slide");
 
-    res.status(200).json(results);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+      slide.innerHTML = `
+        <img src="${article.urlToImage || 'https://via.placeholder.com/1200x800'}">
+        <div class="content">
+          <h2>${article.title}</h2>
+          <p>${article.description || ""}</p>
+          <a href="${article.url}" target="_blank">Read More</a>
+        </div>
+      `;
+
+      carousel.appendChild(slide);
+    });
+
+    slides = document.querySelectorAll(".slide");
+
+  } catch (error) {
+    console.error("Frontend fetch error:", error);
   }
 }
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlide();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+
+function updateSlide() {
+  const carousel = document.getElementById("carousel");
+  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+loadNews();
