@@ -25,7 +25,7 @@ document.getElementById("signupForm").addEventListener("submit", async function(
 
   if (data.message === "Registration successful") {
     setTimeout(() => {
-      window.location.href = "log.html";
+      window.location.href = "home.html";
     }, 1500);
   }
 });
