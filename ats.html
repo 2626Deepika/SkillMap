@@ -1,26 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ATS Resume Scanner</title>
-    <link rel="stylesheet" href="ats.css">
 
-    <!-- PDF.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.8/mammoth.browser.min.js"></script>
+    <link rel="stylesheet" href="ats.css">
+    <title>AI Resume Analyzer</title>
+
 </head>
+
 <body>
 
 <div class="container">
-    <h1>ATS Resume Scanner</h1>
+    <h1>AI Resume Analyzer</h1>
 
-    <textarea id="jobDesc" placeholder="Paste Job Description here"></textarea>
+    <label>Enter Job Role or Job Description</label>
+    <textarea id="job" rows="4" placeholder="Example: Data Analyst with SQL and Python skills"></textarea>
 
-    <input type="file" id="resumeFile" accept=".pdf">
+    <label>Paste Resume (Optional)</label>
+    <textarea id="resume" rows="6" placeholder="Paste resume here OR upload file below"></textarea>
 
-    <button onclick="checkATS()">Check Resume</button>
+    <label>Upload Resume (PDF or DOCX)</label>
+    <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" />
 
-    <div id="result"></div>
+    <button onclick="analyzeResume()">Analyze Resume</button>
+
+    <div class="result" id="result" style="display:none;">
+        <div class="score-circle" id="score"></div>
+
+        <h3 class="match-head">Matched Skills</h3>
+        <ul id="matched"></ul>
+
+        <h3 class="miss-head">Missing Skills</h3>
+        <ul id="missing"></ul>
+
+        <h3 class="suggestion-head">Suggestions</h3>
+        <ul class="suggestions" id="suggestions"></ul>
+    </div>
 </div>
 
 <script src="ats.js"></script>
+
 </body>
 </html>
