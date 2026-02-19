@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f172a;
+  /*background: #0f172a;*/
+  background-image: url("https://media.istockphoto.com/id/1410328699/video/4k-abstract-particle-background.avif?s=640x640&k=20&c=flXNmEi2tG3ZSstDPPrijd_FNnD25cs_xYdF6KtiQOQ=");
+  background-size: cover;
   color: white;
 }
 
@@ -11,17 +13,31 @@ body {
   font-size: 40px;
 }
 
+
 .tools-container {
   width: 90%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);  /* Large devices */
   gap: 30px;
   padding-bottom: 60px;
 }
 
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+  .tools-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Devices (Mobiles) */
+@media (max-width: 576px) {
+  .tools-container {
+    grid-template-columns: 1fr;
+  }
+}
 .tool-card {
-  background: #1e293b;
+  background: #1e293b85;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
